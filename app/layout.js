@@ -14,8 +14,8 @@ export default function RootLayout({ children }) {
     <ClerkProvider
       signInUrl="/sign-in"
       signUpUrl="/sign-up"
-      afterSignInUrl="/dashboard" // Optional
-      afterSignOutUrl="/sign-in"
+      signInFallbackRedirectUrl="/dashboard" // Optional
+      signUpFallbackRedirectUrl="/sign-in"
     >
       <html lang="en">
         <body className={outfit.className}>
