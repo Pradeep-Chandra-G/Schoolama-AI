@@ -11,13 +11,17 @@ export const metadata = {
 const outfit = Outfit({ subsets: ['latin'] })
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      signInUrl="/sign-in"
+      signUpUrl="/sign-up"
+      afterSignInUrl="/dashboard" // Optional
+      afterSignOutUrl="/sign-in"
+    >
       <html lang="en">
         <body className={outfit.className}>
           <Provider>
             {children}
           </Provider>
-          {children}
           <Toaster />
         </body>
       </html>
