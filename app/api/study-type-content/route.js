@@ -8,7 +8,7 @@ export async function POST(req) {
     const { chapters, courseId, type } = await req.json();
 
     const PROMPT = type == 'Flashcard' ? 'Generate the flashcard on topic:' + chapters + 'in JSON format with front back content, maximum 15'
-        : 'Generate the Quiz on topic:' + chapters + 'with Question and Options along with correct answer in JSON format with fields questions, options, answer, maximum 15'
+        : 'Generate the Quiz on topic:' + chapters + 'with Question and Options along with correct answer in JSON format with fields question, options, answer, maximum 15'
 
     // Insert record to DB, update status to Generating...
     const result = await db.insert(STUDY_TYPE_CONTENT).values({
