@@ -1,5 +1,5 @@
 "use client"
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { LayoutDashboard, Shield, UserCircle } from 'lucide-react'
@@ -26,9 +26,13 @@ function SideBar() {
       path: "/dashboard/profile"
     }
   ]
-
-  const { totalCourse, setTotalCourse } = useContext(CourseCountContext);
+  const { totalCourse = 0, setTotalCourse = () => { } } = useContext(CourseCountContext) || {};
+  console.log("In sidebar, Course Count Context: ", CourseCountContext);
   const path = usePathname();
+  // Debug: Watch for changes in totalCourse
+  useEffect(() => {
+    console.log('SideBar - totalCourse updated to:', totalCourse);
+  }, [totalCourse]);
   return (
     <div className='h-screen shadow-md p-5'>
       <div className="flex gap-2 items-center">
