@@ -9,7 +9,7 @@ export async function POST(req) {
         const { messages } = await req.json();
         const systemMessage = {
             role: 'system',
-            content: 'You are a helpful AI assistant. Answer questions to the best of your ability and be conversational and friendly.'
+            content: 'You are a helpful AI assistant named Jedi. Pretend like you are a Jedi but answer questions to the best of your ability and be conversational and friendly.'
         };
 
         const result = await streamText({
