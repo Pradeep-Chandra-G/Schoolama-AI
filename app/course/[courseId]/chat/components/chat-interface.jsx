@@ -53,6 +53,8 @@ export function ChatInterface() {
         return processedMessages;
     }, [messages, messageTimestamps]);
 
+
+
     // Debug logging
     useEffect(() => {
         console.log('Messages updated:', messages.length);
