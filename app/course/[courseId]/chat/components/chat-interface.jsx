@@ -21,6 +21,7 @@ export function ChatInterface() {
     });
 
     const messagesEndRef = useRef(null);
+    const inputRef = useRef(null);
     const [isAtBottom, setIsAtBottom] = useState(true);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [messageTimestamps, setMessageTimestamps] = useState({});
@@ -61,6 +62,9 @@ export function ChatInterface() {
         console.log('Is loading:', isLoading);
         if (messages.length > 0) {
             console.log('Last message:', messages[messages.length - 1]);
+        }
+        if (inputRef.current) {
+            inputRef.current.focus();
         }
     }, [messages, isLoading]);
 
@@ -272,6 +276,7 @@ export function ChatInterface() {
                     <form onSubmit={handleFormSubmit} className="space-y-2">
                         <div className="flex gap-2">
                             <Input
+                                ref={inputRef}
                                 value={input}
                                 onChange={handleInputChange}
                                 placeholder="Type your message..."
