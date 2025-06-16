@@ -82,7 +82,7 @@ function StudyMaterialSection({ courseId, course }) {
     const MaterialList = [
         {
             name: "Notes/Chapters",
-            desc: 'Read notes to prepare',
+            desc: 'Read notes to prepare and revise',
             icon: '/notes.png',
             path: '/notes',
             type: 'notes'
