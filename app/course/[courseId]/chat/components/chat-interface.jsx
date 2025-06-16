@@ -137,7 +137,7 @@ export function ChatInterface() {
                         <Bot className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                     </div>
                     <div>
-                        <h1 className="font-bold text-lg sm:text-xl text-gray-800">AI Assistant</h1>
+                        <h1 className="font-bold text-lg sm:text-xl text-gray-800">Jedi</h1>
                         <p className="text-xs sm:text-sm text-gray-500 hidden sm:block">
                             Your intelligent conversation partner
                         </p>
