@@ -19,9 +19,9 @@ function CourseCardItem({ course }) {
                         className="sm:w-[45px] sm:h-[45px] lg:w-[50px] lg:h-[50px] rounded-lg"
                     />
                 </div>
-                <div className="bg-blue-600 text-white px-2 py-1 rounded-full">
+                {/* <div className="bg-blue-600 text-white px-2 py-1 rounded-full">
                     <h2 className='text-[9px] sm:text-[10px] font-medium'>20 Dec</h2>
-                </div>
+                </div> */}
             </div>
 
             {/* Course title - Responsive typography */}
@@ -35,10 +35,10 @@ function CourseCardItem({ course }) {
             </p>
 
             {/* Progress bar - Consistent across all sizes */}
-            <div className="mb-3 sm:mb-4">
+            {/* <div className="mb-3 sm:mb-4">
                 <Progress value={0} className="h-2" />
                 <p className="text-xs text-gray-500 mt-1">0% Complete</p>
-            </div>
+            </div> */}
 
             {/* Action button - Responsive sizing and layout */}
             <div className="flex justify-end">
