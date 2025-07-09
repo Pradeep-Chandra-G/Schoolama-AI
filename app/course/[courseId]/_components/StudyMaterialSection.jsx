@@ -54,47 +54,6 @@ function StudyMaterialSection({ courseId, course }) {
         setStudyTypeContent(result.data);
     }
 
-    // Special Chat Card Component
-    // const ChatCard = ({ item }) => {
-    //     return (
-    //         <div className="bg-gradient-to-br from-blue-50 to-indigo-100 border-2 border-blue-200 rounded-xl p-4 sm:p-5 lg:p-6 hover:shadow-lg transition-all duration-300 hover:scale-105">
-    //             {/* Icon */}
-    //             <div className="flex justify-center mb-3 sm:mb-4">
-    //                 <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
-    //                     <img
-    //                         src={item.icon}
-    //                         alt={item.name}
-    //                         className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 filter brightness-0 invert"
-    //                     />
-    //                 </div>
-    //             </div>
-
-    //             {/* Title */}
-    //             <h3 className="text-base sm:text-lg lg:text-xl font-bold text-gray-800 text-center mb-2 sm:mb-3">
-    //                 {item.name}
-    //             </h3>
-
-    //             {/* Description */}
-    //             <p className="text-xs sm:text-sm lg:text-base text-gray-600 text-center mb-3 sm:mb-4 lg:mb-5 leading-relaxed">
-    //                 {item.desc}
-    //             </p>
-
-    //             {/* Status Badge */}
-    //             <div className="flex justify-center mb-3 sm:mb-4">
-    //                 <span className="bg-green-100 text-green-700 text-xs sm:text-sm font-medium px-2 sm:px-3 py-1 rounded-full border border-green-200">
-    //                     ✓ Ready
-    //                 </span>
-    //             </div>
-
-    //             {/* Access Button */}
-    //             <div className="flex justify-center">
-    //                 <button className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-medium text-xs sm:text-sm lg:text-base px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg transition-all duration-200 hover:shadow-md active:scale-95">
-    //                     Access Chat
-    //                 </button>
-    //             </div>
-    //         </div>
-    //     );
-    // };
     const ChatCard = ({ item }) => {
         return (
             <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-blue-200">
