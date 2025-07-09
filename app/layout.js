@@ -29,20 +29,21 @@
 //   );
 // }
 
-
 import { ClerkProvider } from "@clerk/nextjs";
-import { Provider } from './provider'
-import { Outfit } from 'next/font/google';
-import { Toaster } from "@/components/ui/sonner"
-import ContextWrapper from './_context/ContextWrapper'
+import { Provider } from "./provider";
+import { Outfit } from "next/font/google";
+import { Toaster } from "@/components/ui/sonner";
+import ContextWrapper from "./_context/ContextWrapper";
 import "./globals.css";
 
 export const metadata = {
   title: "SchooLama AI LMS",
   description: "AI-powered Learning Management System",
+  name: "google-site-verification",
+  content: "dMRoWBJMECepD5TiNAEhxXdM0bvQ2OS_Qu81HlKRFHA",
 };
 
-const outfit = Outfit({ subsets: ['latin'] })
+const outfit = Outfit({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
   return (
@@ -55,9 +56,7 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body className={outfit.className}>
           <Provider>
-            <ContextWrapper>
-              {children}
-            </ContextWrapper>
+            <ContextWrapper>{children}</ContextWrapper>
           </Provider>
           <Toaster />
         </body>
