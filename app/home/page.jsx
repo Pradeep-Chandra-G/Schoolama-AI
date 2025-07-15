@@ -1,20 +1,24 @@
 "use client"
 
-import React, { useEffect } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-
+import Loading from "./loading";
 
 const HomePage = () => {
 
     const Router = useRouter();
 
-    const handleOnSignIn = (e) => {
-        Router.push("/sign-in");
-    }
+    const [loading, setLoading] = useState(false);
 
-    const handleOnGetStarted = (e) => {
-        Router.push("/sign-up");
-    }
+  const handleOnSignIn = () => {
+    setLoading(true);
+    Router.push("/sign-in");
+  };
+
+  const handleOnGetStarted = () => {
+    setLoading(true);
+    Router.push("/sign-up");
+  };
 
   useEffect(() => {
     // Smooth scroll for internal anchor links
@@ -53,10 +57,16 @@ const HomePage = () => {
       anchors.forEach((anchor) =>
         anchor.removeEventListener("click", handleAnchorClick)
       );
+      setLoading(false);
     };
   }, []);
 
+  if (loading) {
+    return <Loading />;
+  }
+
   return (
+    
     <main className="bg-gray-900 text-white overflow-x-hidden font-outfit">
       {/* Add the full JSX content here from the HTML body, converted line-by-line */}
 
@@ -593,6 +603,7 @@ const HomePage = () => {
         </div>
       </footer>
     </main>
+    
   );
 };
 

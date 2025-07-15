@@ -12,7 +12,7 @@ export const generateNotesAIModel = async (userPrompt) => {
     {
       role: "system",
       content:
-        "You are an AI that generates concise, topic-focused study notes. Respond with valid JSON format only!,  No additional wrapper text only valid JSON Object",
+        "You are an AI that generates highly verbose, engineering level, topic-focused study notes. Respond with valid JSON format only!,  No additional wrapper text only valid JSON Object",
     },
     { role: "user", content: userPrompt },
   ]);
